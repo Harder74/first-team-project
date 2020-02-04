@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         //rotation of player in degrees (constant value used to find starting direction of player)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        _rb.rotation = angle;
 
     }
 }
