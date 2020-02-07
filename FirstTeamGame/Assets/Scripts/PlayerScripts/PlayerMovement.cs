@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //getting input for x and y axis
-        //gets input based on unity set controls so wasd works but so would arrow keys I believe
+        //gets input based on unity set controls so wasd works but also the arrow keys as well
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
 
@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         //rotation of player in degrees (constant value used to find starting direction of player)
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        //setting players rotation to the angle calculated
         _rb.rotation = angle;
 
     }
